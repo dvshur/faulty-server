@@ -1,0 +1,16 @@
+[package]
+name = "faulty-server"
+version = "0.1.0"
+authors = ["Dmitry Shuranov <dvshur@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+warp = { version = "0.3", default-features = false }
+rand = { version = "0.8", features = ["small_rng"] }
+chrono = { version = "0.4", features = ["serde"] }
+envy = "0.4"
